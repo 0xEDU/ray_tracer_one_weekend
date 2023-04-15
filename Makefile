@@ -1,5 +1,6 @@
 NAME = rt
 IMAGE = image.ppm
+PNG = image.png
 
 FLAGS = -Wall -Wextra -Werror -g3
 
@@ -23,6 +24,10 @@ $(OBJS_PATH)%.o: $(SRCS_PATH)%.cc
 
 run: all
 	@./rt > $(IMAGE); feh $(IMAGE)
+	@convert $(IMAGE) $(PNG)
+	@git add $(PNG)
+	@git commit -m "added image from Makefile"
+	@git push origin master
 
 clean:
 	@rm -rf $(OBJS_PATH)
