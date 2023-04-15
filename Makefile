@@ -23,7 +23,7 @@ $(OBJS_PATH)%.o: $(SRCS_PATH)%.cc
 	@echo -e "\033[1;92m[SUCCESS] Object creation done!\033[0m"
 
 run: all
-	@./rt > $(IMAGE); feh $(IMAGE)
+	@./rt > $(IMAGE)
 	@convert $(IMAGE) $(PNG)
 	@git add $(PNG)
 	@git commit -m "added image from Makefile"
