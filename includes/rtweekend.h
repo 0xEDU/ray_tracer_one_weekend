@@ -41,4 +41,7 @@ inline double clamp(double x, double min, double max) {
 
 // Commom Headers
 
+#include "ray.h"
+#include "vec3.h"
+
 #endif
